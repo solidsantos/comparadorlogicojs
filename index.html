@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="javascript:comparador()">
+        <div>
+            <label for="n1">N1</label>
+            <input type="text" id="n1">
+        </div>
+        <div>
+            <label for="n2">N2</label>
+            <input type="text" id="n2">
+        </div>
+        <div>
+            <label for="op">Comp</label>
+            <select name="Comp" id="op">
+                <option value="default" selected disabled>Selecione um operador</option>
+                <option value=">">Maior que (>)</option>
+                <option value="<">Menor que (<)</option>
+                <option value=">=">Maior ou igual (>=)</option>
+                <option value="<=">Menor ou igual (<=)</option>
+                <option value="==">Igualdade (==)</option>
+                <option value="!=">Igualdade (!=)</option>
+            </select>
+        </div>
+        <input type="submit" value="=">
+    </form>
+    <p>Resultado: <span id="result"></span></p>
+    <script src="./comparador.js"></script>
+</body>
+
+</html>
