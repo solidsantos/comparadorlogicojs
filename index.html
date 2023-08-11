@@ -5,33 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <form action="javascript:comparador()">
-        <div>
-            <label for="n1">N1</label>
-            <input type="text" id="n1">
+    <header>
+        <h1>Comparador Lógico</h1>
+    </header>
+    <main class="flex-column">
+        <form action="javascript:comparador()" class="flex-row">
+            <div id="in" class="flex-row">
+                <input type="text" id="n1" placeholder="Ex. 1">
+                <select name="Comp" id="op">
+                    <option value="default" selected disabled>Selecione um operador</option>
+                    <option value="maior">Maior que</option>
+                    <option value="menor">Menor que</option>
+                    <option value="maiorIgual">Maior ou igual</option>
+                    <option value="menorIgual">Menor ou igual</option>
+                    <option value="igualdade">Igual a</option>
+                    <option value="diferente">Diferente de</option>
+                </select>
+                <input type="text" id="n2" placeholder="Ex. 2">
+            </div>
+            <input type="submit" value="=">
+        </form>
+        <div id="out" class="flex-row">
+            <span id="result"></span>
         </div>
-        <div>
-            <label for="n2">N2</label>
-            <input type="text" id="n2">
-        </div>
-        <div>
-            <label for="op">Comp</label>
-            <select name="Comp" id="op">
-                <option value="default" selected disabled>Selecione um operador</option>
-                <option value=">">Maior que (>)</option>
-                <option value="<">Menor que (<)</option>
-                <option value=">=">Maior ou igual (>=)</option>
-                <option value="<=">Menor ou igual (<=)</option>
-                <option value="==">Igualdade (==)</option>
-                <option value="!=">Igualdade (!=)</option>
-            </select>
-        </div>
-        <input type="submit" value="=">
-    </form>
-    <p>Resultado: <span id="result"></span></p>
+        <!--<h1><span id="result"></span></h1>-->
+    </main>
     <script src="./comparador.js"></script>
 </body>
 

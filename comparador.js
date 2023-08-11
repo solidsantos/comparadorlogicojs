@@ -4,28 +4,36 @@ function comparador() {
     const n2 = document.getElementById('n2').value;
     let result;
     switch (op) {
-        case '>':
+        case 'maior':
             result = n1 > n2;
             break;
-        case '<':
+        case 'menor':
             result = n1 < n2;
             break;
-        case '>=':
+        case 'maiorIgual':
             result = n1 >= n2;
             break;
-        case '<=':
+        case 'menorIgual':
             result = n1 <= n2;
             break;
-        case '==':
+        case 'igualdade':
             result = n1 == n2;
             break;
-        case '!=':
+        case 'diferente':
             result = n1 != n2;
             break;
 
         default:
             break;
     }
-    console.log(result);
-    document.getElementById('result').innerHTML = result;
+    if (result) {
+        document.getElementById('result').style.display = 'inline';
+        document.getElementById('result').style.color = '#2b9348';
+        document.getElementById('result').innerHTML = 'Verdadeiro';
+    }
+    else {
+        document.getElementById('result').style.display = 'inline';
+        document.getElementById('result').style.color = '#d62828';
+        document.getElementById('result').innerHTML = 'Falso';
+    }
 }
